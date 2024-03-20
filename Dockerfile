@@ -1,4 +1,4 @@
-FROM alpine
+FROM python:3.11-alpine
 
 ENV LANG C.UTF-8
 ENV TZ 'Asia/Shanghai'
@@ -11,12 +11,12 @@ COPY entrypoint.sh /entrypoint.sh
 COPY requirements.txt /requirements.txt
 
 RUN apk add --no-cache ffmpeg libmagic tiff openjpeg cairo tzdata openblas ca-certificates \
-  python3 py3-pip py3-numpy py3-olefile py3-cryptography py3-decorator && \
+  py3-numpy py3-olefile py3-cryptography py3-decorator && \
   cp /usr/share/zoneinfo/${TZ} /etc/localtime && \
   apk del tzdata
 
 RUN apk add --no-cache --virtual .build-deps git build-base libffi-dev python3-dev && \
-  pip3 install --break-system-packages -r requirements.txt && \
+  pip3 install --root-user-action=ignore -r requirements.txt && \
   apk del .build-deps && \
   rm -rf /var/cache/apk/* && \
   rm -rf ~/.cache
