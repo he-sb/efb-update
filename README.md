@@ -1,21 +1,21 @@
 # ehforwarderbot
 
-> **原始作者仓库地址 [jiz4oh/ehforwarderbot](https://github.com/jiz4oh/ehforwarderbot)**，本文在此仓库基础之上新增两个插件，并补充了使用文档。
+> **原始作者仓库地址 [jiz4oh/ehforwarderbot](https://github.com/jiz4oh/ehforwarderbot)**，本文 ~~在此仓库基础之上新增两个插件，并~~ 补充了使用文档。
 
 ## 0. 克隆仓库
 
 ```shell
-git clone https://github.com/wbbk/efb-update efb-update
+git clone https://github.com/he-sb/efb-update efb-update
 ```
 
 ## 1. 编辑配置文件
 
 1. 主配置文件 `profiles/default/config.yaml`
-    - `middlewares` 定义了启用的转发通道和中间件
+    - ~~`middlewares` 定义了启用的转发通道和中间件~~
         - ~~`catbaron.voice_recog` 语音转文字~~
-        - `patch.PatchMiddleware` 手机微信标记已读
-        - 默认启用两个插件，如果不需要某个插件，删除或注释对应的行即可
-        - 如果两个都不需要，可以直接删除或注释 `middlewares` 小节
+        - ~~`patch.PatchMiddleware` 手机微信标记已读~~
+        - ~~默认启用两个插件，如果不需要某个插件，删除或注释对应的行即可~~
+        - ~~如果两个都不需要，可以直接删除或注释 `middlewares` 小节~~
 
 2. Telegram 配置 `profiles/default/blueset.telegram/config.yaml`
     - `token` Telegram 的 bot token
@@ -28,10 +28,10 @@ git clone https://github.com/wbbk/efb-update efb-update
 4. ~~插件 `catbaron.voice_recog` 配置 `profiles/default/catbaron.voice_recog/config.yaml`~~
     - ~~配置方法参考插件仓库： [catbaron0/efb-voice_recog-middleware](https://github.com/catbaron0/efb-voice_recog-middleware)~~
 
-5. 插件 `patch.PatchMiddleware` 配置 `profiles/default/patch.PatchMiddleware/config.yaml`
-    - `auto_mark_as_read` 是否自动在手机微信标记已读
-    - `remove_emoji_in_title` 是否移除 Telegram 群组名称中的 emoji
-    - 其他可用配置参考插件仓库： [ehForwarderBot/efb-patch-middleware](https://github.com/ehForwarderBot/efb-patch-middleware)
+5. ~~插件 `patch.PatchMiddleware` 配置 `profiles/default/patch.PatchMiddleware/config.yaml`~~
+    - ~~`auto_mark_as_read` 是否自动在手机微信标记已读~~
+    - ~~`remove_emoji_in_title` 是否移除 Telegram 群组名称中的 emoji~~
+    - ~~其他可用配置参考插件仓库： [ehForwarderBot/efb-patch-middleware](https://github.com/ehForwarderBot/efb-patch-middleware)~~
 
 ## 2. 启动容器
 
@@ -47,7 +47,7 @@ docker rm -f efb >/dev/null 2>&1 && docker run -d --name=efb --restart=always -v
 ### 直接使用
 
 ```shell
-git clone https://github.com/wbbk/efb-update efb-update
+git clone https://github.com/he-sb/efb-update efb-update
 cd efb-update
 # 参考上文，编辑好配置文件
 docker compose up -d
