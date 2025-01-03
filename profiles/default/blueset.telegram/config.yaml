@@ -1,4 +1,4 @@
-token: "your telegram token"
+token: "your telegram bot token"
 admins:
 - your telegram id
 flags:

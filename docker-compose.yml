@@ -12,6 +12,6 @@ services:
     <<: *default
     container_name: efb-wechat
     image: j0k3rh/efb-wechat
-    network_mode: bridge
+    network_mode: host
     volumes:
-      - ./profiles:/data/profiles
+      - ./data:/data

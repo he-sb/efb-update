@@ -12,7 +12,7 @@ git clone https://github.com/wbbk/efb-update efb-update
 
 1. 主配置文件 `profiles/default/config.yaml`
     - `middlewares` 定义了启用的转发通道和中间件
-        - `catbaron.voice_recog` 语音转文字
+        - ~~`catbaron.voice_recog` 语音转文字~~
         - `patch.PatchMiddleware` 手机微信标记已读
         - 默认启用两个插件，如果不需要某个插件，删除或注释对应的行即可
         - 如果两个都不需要，可以直接删除或注释 `middlewares` 小节
@@ -25,8 +25,8 @@ git clone https://github.com/wbbk/efb-update efb-update
 3. wechat 配置 `profiles/default/blueset.wechat/config.yaml`
     - 可用的配置及含义参考插件仓库： [ehForwarderBot/efb-wechat-slave](https://github.com/ehForwarderBot/efb-wechat-slave?tab=readme-ov-file#%E5%AE%9E%E9%AA%8C%E5%8A%9F%E8%83%BD)
 
-4. 插件 `catbaron.voice_recog` 配置 `profiles/default/catbaron.voice_recog/config.yaml`
-    - 配置方法参考插件仓库： [catbaron0/efb-voice_recog-middleware](https://github.com/catbaron0/efb-voice_recog-middleware)
+4. ~~插件 `catbaron.voice_recog` 配置 `profiles/default/catbaron.voice_recog/config.yaml`~~
+    - ~~配置方法参考插件仓库： [catbaron0/efb-voice_recog-middleware](https://github.com/catbaron0/efb-voice_recog-middleware)~~
 
 5. 插件 `patch.PatchMiddleware` 配置 `profiles/default/patch.PatchMiddleware/config.yaml`
     - `auto_mark_as_read` 是否自动在手机微信标记已读
@@ -76,3 +76,5 @@ docker compose up -d
     - 作者为系统直接部署非打包docker镜像，但可参考相关配置和解释
 7. [zhangyile/telegram-wechat: 使用 telegram 收发微信](https://github.com/zhangyile/telegram-wechat)
 8. [efb-wechat-docker 绑定过程记录 | HE-SB-技术栈](https://tech.he-sb.top/posts/usage-of-efbwechat-docker/)
+9. [Ovler-Young/efb-wechat-slave: A channel for EH Forwarder Bot.](https://github.com/Ovler-Young/efb-wechat-slave)
+    - 最新版 dockerfile 使用的 efb 代码

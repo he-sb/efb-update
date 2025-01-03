@@ -1,6 +1,0 @@
-pysocks
-ehforwarderbot
-efb-telegram-master[tgs]
-efb-wechat-slave @ git+https://github.com/ehForwarderBot/efb-wechat-slave
-efb-voice_recog-middleware
-efb-patch-middleware

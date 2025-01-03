@@ -1,2 +1,2 @@
-auto_mark_as_read: True # 自动在手机微信标记已读
+auto_mark_as_read: false # 自动在手机微信标记已读
 remove_emoji_in_title: True # 自动移除 Telegram 群组名称中的 emoji
